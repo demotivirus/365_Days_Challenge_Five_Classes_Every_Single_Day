@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Заполнить форму студента</p>
+<form action="process-form" th:object="${student}">
+    <p>Введи имя: <input type="text" th:field="${student.firstName}" /></p>
+    <p>Введи фамилию: <input type="text" th:field="${student.lastName}" /></p>
+    <select th:field="${student.country}">
+        <option th:value="'BRZ'" th:text="Бразилия"></option>
+        <option th:value="'RUS'" th:text="Россия"></option>
+        <option th:value="'USA'" th:text="Сша"></option>
+    </select>
+
+    <input type="radio" name="Курс" th:value="${student.courses}" th:field="${student.courses}">
+    <label th:for="${student.courses}" th:text="${student.courses}">Курсы</label>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

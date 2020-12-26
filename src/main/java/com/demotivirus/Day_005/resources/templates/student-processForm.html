@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Форма студента</h1>
+<p th:text="'Имя: ' + ${student.firstName}" />
+<p th:text="'Фамилия: ' + ${student.lastName}" />
+<p th:text="'Страна: ' + ${student.country}" />
+<a href="show-form">Submit another message</a>
+</body>
+</html>
