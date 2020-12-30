@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/static/css/student-form.css}"/>
+</head>
+<body>
+<form action="#" th:action="@{/student}" th:object="${student}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error">Name Error</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input type="number" th:field="*{age}"/></td>
+            <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}" cssClass="error">Age Error</td>
+        </tr>
+        <tr>
+            <td>Course:</td>
+            <td><input type="text" th:field="*{course}"/></td>
+            <td th:if="${#fields.hasErrors('course')}" th:errors="*{course}" cssClass="error">Course Error</td>
+        </tr>
+        <tr>
+            <td>Postal code:</td>
+            <td><input type="text" th:field="*{postalCode}"/></td>
+            <td th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" cssClass="error">Postal code Error</td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

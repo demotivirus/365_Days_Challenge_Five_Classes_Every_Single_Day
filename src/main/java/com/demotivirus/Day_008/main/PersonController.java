@@ -10,7 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import javax.validation.Valid;
 
-//NOT WORK CORRECTLY
 @Controller
 public class PersonController extends WebMvcConfigurerAdapter {
 
