@@ -68,7 +68,19 @@
 			<artifactId>hibernate-validator-cdi</artifactId>
 			<version>${hibernate.validator}</version>
 		</dependency>
+		<!-- HIBERNATE WITH JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>2.4.1</version>
+		</dependency>
 
+		<!-- POSTGRESQL CONNECTOR -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.18</version>
+		</dependency>
 	</dependencies>
 
 	<build>
