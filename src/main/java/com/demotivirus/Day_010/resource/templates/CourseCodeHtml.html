@@ -1,0 +1,31 @@
+<!-- WITH WORKING CSS -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="#" th:action="@{/course-code}" th:object="${course}" method="post">
+    <table>
+        <tr>
+            <td>Enter course code:</td>
+            <td><input type="text" th:field="*{courseCode}"/></td>
+            <td th:if="${#fields.hasErrors('courseCode')}"
+                th:errors="*{courseCode}" class="error">Course code error</td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit">Validate</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
