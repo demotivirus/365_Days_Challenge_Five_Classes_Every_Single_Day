@@ -1,4 +1,4 @@
-package com.demotivirus.Day_011.main;
+package com.demotivirus.Day_012_S2.main;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,27 +14,26 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-//NOT WORK CORRECTLY FOR CASCADE
 @Entity
-@Table(name = "instructor_detail")
+@Table(name = "trainer_info")
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
-public class InstructorDetail {
+public class TrainerInfo {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne(mappedBy = "instructorDetail",
+    @OneToOne(mappedBy = "trainerInfo",
             cascade = {
                     CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST
             })
-    private Instructor instructor;
+    private Trainer trainer;
 
     @NonNull
-    @Column(name = "youtube_channel")
-    private String youtubeChannel;
+    @Column(name = "power")
+    private Integer power;
 
     @NonNull
     @Column(name = "hobby")
@@ -42,9 +41,9 @@ public class InstructorDetail {
 
     @Override
     public String toString() {
-        return "InstructorDetail{" +
+        return "TrainerInfo{" +
                 "id=" + id +
-                ", youtubeChannel='" + youtubeChannel + '\'' +
+                ", power=" + power +
                 ", hobby='" + hobby + '\'' +
                 '}';
     }
