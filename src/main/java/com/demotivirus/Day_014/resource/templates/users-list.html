@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="..static/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="..static/css/user-style.css" th:href="@{/css/user-style.css}"/>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h2>CRM - User relationship management</h2>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="content">
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Login</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                </tr>
+
+                <tr th:each="user : ${users}">
+                    <td><span th:text="${user.id}">Id</span></td>
+                    <td><span th:text="${user.login}">Login</span></td>
+                    <td><span th:text="${user.password}">Password</span></td>
+                    <td><span th:text="${user.email}">Email</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
