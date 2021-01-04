@@ -35,6 +35,7 @@ public class UserController {
 
     @PostMapping("save-user")
     public String saveUser(@ModelAttribute("user") User user){
-        return "users-list";
+        userService.saveUser(user);
+        return "redirect:/user/list";
     }
 }
