@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS post CASCADE ;
+DROP TABLE IF EXISTS post CASCADE;
 DROP TABLE IF EXISTS review;
 
 create table post
