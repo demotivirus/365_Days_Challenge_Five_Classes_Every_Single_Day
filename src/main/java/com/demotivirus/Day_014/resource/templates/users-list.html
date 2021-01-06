@@ -25,6 +25,7 @@
                     <th>Login</th>
                     <th>Password</th>
                     <th>Email</th>
+                    <th>Action</th>
                 </tr>
 
                 <tr th:each="user : ${users}">
@@ -32,6 +33,12 @@
                     <td><span th:text="${user.login}">Login</span></td>
                     <td><span th:text="${user.password}">Password</span></td>
                     <td><span th:text="${user.email}">Email</span></td>
+                    <td>
+                        <a th:href="@{/user/update/{id}(id=${user.id})}">Edit</a>
+                        |
+                        <a th:href="@{/user/delete/{id}(id=${user.id})}"
+                           onclick="if (!(confirm('Are you sure?'))) return false" >Delete</a>
+                    </td>
                 </tr>
             </table>
         </div>

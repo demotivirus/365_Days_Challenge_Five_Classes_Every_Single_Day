@@ -25,4 +25,24 @@ public class UserDaoImpl implements UserDao{
         Session session = sessionFactory.getCurrentSession();
         session.save(user);
     }
+
+    @Override
+    public User getUser(Integer id) {
+        return sessionFactory.getCurrentSession().get(User.class, id);
+    }
+
+    @Override
+    public void updateUser(User user) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(user);
+    }
+
+    //update/delete query's not typed
+    @Override
+    public void deleteUser(Integer id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("DELETE FROM User WHERE id=:searchId");
+        query.setParameter("searchId", id);
+        query.executeUpdate();
+    }
 }
