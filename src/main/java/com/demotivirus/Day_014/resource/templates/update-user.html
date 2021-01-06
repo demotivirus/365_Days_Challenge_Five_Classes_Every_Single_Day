@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit user</title>
+    <link rel="stylesheet" href="..static/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="..static/css/user-style.css" th:href="@{/css/user-style.css}"/>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <h2>Edit user</h2>
+    </div>
+</div>
+
+<div id="container">
+    <form th:action="@{/user/update-user}" th:object="${user}" method="post">
+        <table>
+            <tr>
+                <td>Login:</td>
+                <td><input type="text" th:field="*{login}"/></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" th:field="*{password}"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" th:field="*{email}"/></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Edit</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
