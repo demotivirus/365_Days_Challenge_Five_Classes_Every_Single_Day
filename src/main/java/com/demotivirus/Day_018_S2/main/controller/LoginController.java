@@ -1,4 +1,4 @@
-package com.demotivirus.Day_018_S2.controller;
+package com.demotivirus.Day_018_S2.main.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

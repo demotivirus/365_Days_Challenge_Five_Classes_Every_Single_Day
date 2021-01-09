@@ -1,4 +1,4 @@
-package com.demotivirus.Day_018_S2;
+package com.demotivirus.Day_018_S2.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
