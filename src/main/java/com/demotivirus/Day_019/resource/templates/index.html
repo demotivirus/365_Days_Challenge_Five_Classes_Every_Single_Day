@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Start page</p>
+    <form th:action="@{logout}" method="post">
+        <input type="submit" value="Logout"/>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Password</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td><span sec:authentication="principal.username"></span></td>
+                <td><span sec:authentication="principal.password"></span></td>
+                <td><span sec:authentication="principal.authorities"></span></td>
+            </tr>
+        </table>
+    </form>
+    <a href="admin">Admins only</a>
+</body>
+</html>
