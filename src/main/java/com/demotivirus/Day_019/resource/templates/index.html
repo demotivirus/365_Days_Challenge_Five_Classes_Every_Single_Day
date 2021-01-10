@@ -22,6 +22,8 @@
             </tr>
         </table>
     </form>
-    <a href="admin">Admins only</a>
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        <a href="admin">Admins only</a>
+    </div>
 </body>
 </html>
