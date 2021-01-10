@@ -1,0 +1,15 @@
+{
+  "id": 15,
+  "firstName": "Milli",
+  "lastName": "Rossi",
+  "active": true,
+  "address": {
+    "street": "66 Street",
+    "city": "NY",
+    "state": "NY",
+    "zip": "89382",
+    "country": "USA"
+  },
+  "languages": ["Java", "C#", "Python", "Javascript"],
+  "company": "China corp"
+}
