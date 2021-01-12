@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface BookService {
     List<Book> getBooks();
-    Book getBook(Integer id);
-    void saveBook(Book book);
+    Book getBookById(Integer id);
+    void addBook(Book book);
     void deleteBook(Integer id);
 }

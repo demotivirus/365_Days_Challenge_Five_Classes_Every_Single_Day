@@ -1,4 +1,4 @@
-package com.demotivirus.Day_021;
+package com.demotivirus.Day_021.student;
 
 import lombok.Data;
 import lombok.NonNull;

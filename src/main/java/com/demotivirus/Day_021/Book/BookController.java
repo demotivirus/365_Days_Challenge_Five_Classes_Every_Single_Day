@@ -16,32 +16,33 @@ import java.util.List;
 @RequestMapping("api/books")
 public class BookController {
     @Autowired
-    private BookService bookService;
+    private BookDao bookDao;
 
     @GetMapping("")
     public List<Book> getAllBooks(){
-        return bookService.getBooks();
+        return bookDao.findAll();
     }
 
     @GetMapping("{bookId}")
     public Book getBookById(@PathVariable Integer bookId){
         checkBook(bookId);
-        return bookService.getBook(bookId);
+        return bookDao.getOne(bookId);
     }
 
-    @PostMapping("")
-    public void addBook(@RequestBody Book book){
-        bookService.saveBook(book);
+    //@RequestMapping(value = "", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping
+    public Book createBook(@RequestBody Book book) {
+        return bookDao.save(book);
     }
 
-    @DeleteMapping("")
+    @DeleteMapping("{bookId}")
     public void deleteBookById(@PathVariable Integer bookId){
         checkBook(bookId);
-        bookService.deleteBook(bookId);
+        bookDao.deleteById(bookId);
     }
 
     private void checkBook(Integer bookId){
-        if(bookService.getBook(bookId) == null)
+        if(bookDao.getOne(bookId) == null)
             throw new NotFoundException("Book id not found: " + bookId);
     }
 }

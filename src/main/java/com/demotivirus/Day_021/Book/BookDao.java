@@ -1,10 +1,10 @@
 package com.demotivirus.Day_021.Book;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BookDao {
-    List<Book> getBooks();
-    Book getBook(Integer id);
-    void saveBook(Book book);
-    void deleteBook(Integer id);
+public interface BookDao extends JpaRepository<Book, Integer> {
+//    List<Book> getBooks();
+//    Book getBookById(Integer id);
+//    void addBook(Book book);
+//    void deleteBook(Integer id);
 }

@@ -1,5 +1,6 @@
-package com.demotivirus.Day_021;
+package com.demotivirus.Day_021.student;
 
+import com.demotivirus.Day_021.NotFoundException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
