@@ -29,7 +29,11 @@ public class BookController {
         return bookDao.getOne(bookId);
     }
 
-    //@RequestMapping(value = "", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    /**
+     * Set headers:
+     * Content-Type
+     * application/json
+     **/
     @PostMapping
     public Book createBook(@RequestBody Book book) {
         return bookDao.save(book);
