@@ -28,12 +28,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
@@ -45,6 +39,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<!-- DEPENDENCY FOR RUNTIME UPDATE APP: ctrl + f9 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -92,6 +94,13 @@
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 			<version>${thymeleaf-springsecurity5}</version>
 		</dependency>
+
+		<!-- MONITORING ENDPOINTS FOR HEALTH APP -->
+		<!-- Not working with exclude security-->
+		<!--		<dependency>-->
+		<!--			<groupId>org.springframework.boot</groupId>-->
+		<!--			<artifactId>spring-boot-starter-actuator</artifactId>-->
+		<!--		</dependency>-->
 	</dependencies>
 
 	<build>
