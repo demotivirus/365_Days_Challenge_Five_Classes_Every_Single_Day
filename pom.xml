@@ -39,6 +39,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<!-- DEPENDENCY FOR automatic create PAGINATION & SORTING-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
 		<!-- DEPENDENCY FOR RUNTIME UPDATE APP: ctrl + f9 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
