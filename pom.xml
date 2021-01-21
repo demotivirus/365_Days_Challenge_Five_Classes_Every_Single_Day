@@ -19,6 +19,9 @@
 		<lombok.version>1.18.12</lombok.version>
 		<hibernate.validator>6.1.7.Final</hibernate.validator>
 		<thymeleaf-springsecurity5>3.0.4.RELEASE</thymeleaf-springsecurity5>
+		<wsdl4j.version>1.6.2</wsdl4j.version>
+		<javaee-api.version>7.0</javaee-api.version>
+		<cxf-rt-frontend-jaxws.version>3.4.2</cxf-rt-frontend-jaxws.version>
 	</properties>
 
 	<dependencies>
@@ -86,8 +89,19 @@
 		<dependency>
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
-			<version>1.6.2</version>
+			<version>${wsdl4j.version}</version>
 		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.apache.cxf</groupId>-->
+<!--			<artifactId>cxf-rt-frontend-jaxws</artifactId>-->
+<!--			<version>${cxf-rt-frontend-jaxws.version}</version>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee-api.version}</version>
+		</dependency>
+
 
 		<!-- POSTGRESQL CONNECTOR -->
 		<dependency>
