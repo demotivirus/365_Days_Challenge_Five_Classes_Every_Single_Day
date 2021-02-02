@@ -1,0 +1,5 @@
+soap\package-info.class
+soap\GetUserRequest.class
+soap\GetUserResponse.class
+soap\ObjectFactory.class
+soap\User.class
